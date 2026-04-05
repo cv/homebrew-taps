@@ -2,13 +2,13 @@ class BashAst < Formula
   desc "Parse bash scripts to JSON AST using GNU Bash's actual parser"
   homepage "https://github.com/cv/bash-ast"
   url "https://github.com/cv/bash-ast.git",
-      tag:      "v0.3.2",
-      revision: "26330eec13aff1040b7ed55f9e7492800af44997"
+      tag:      "v0.3.3",
+      revision: "dabfcc39c9f80f12940a0bdaa08c2db538e8b483"
   license "GPL-3.0-only"
   bottle do
-    root_url "https://github.com/cv/bash-ast/releases/download/v0.3.2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7e44521bfc46b7006cc20c0cc0ce1f747e909db731faf2b686ca92f8d25ec15f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "54eb73278c32a5207fac19921ed8f669453a041d8042ef469df3a936d2f54901"
+    root_url "https://github.com/cv/bash-ast/releases/download/v0.3.3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bf0a9bb148e5df4f1b3e6d65a1dc55a609a50d89d5b39f1ff5d0bb4fb0a69bbc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "d36026d2f12b27f5a98d06e7d08bbf336ac3e2badedfb1ac5c24d909c232f7ab"
   end
   head "https://github.com/cv/bash-ast.git", branch: "main"
 
