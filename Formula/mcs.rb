@@ -5,23 +5,23 @@
 class Mcs < Formula
   desc "CLI for controlling your connected vehicle"
   homepage "https://github.com/cv/mcs"
-  version "0.7.12"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cv/mcs/releases/download/v0.7.12/mcs_Darwin_x86_64.tar.gz"
-      sha256 "99d7a12c59ca03793fb11a0e855ec41e7e0f0d34279560d0b75575869abd0e0b"
+      url "https://github.com/cv/mcs/releases/download/v0.8.0/mcs_Darwin_x86_64.tar.gz"
+      sha256 "6507d4735265e73cc92322bfa3fd41dd31081450c28d9c26ba54c62ac5fa0e91"
 
-      def install
+      define_method(:install) do
         bin.install "mcs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cv/mcs/releases/download/v0.7.12/mcs_Darwin_arm64.tar.gz"
-      sha256 "52737bc5c34e52c05579d45a6ca8e95adf7432e11d350801e6e269cd8c6cbffd"
+      url "https://github.com/cv/mcs/releases/download/v0.8.0/mcs_Darwin_arm64.tar.gz"
+      sha256 "abcd92159cb07ce4317ad0199d1cc068f3f31c8eb1f878b14325f4e31dd783cb"
 
-      def install
+      define_method(:install) do
         bin.install "mcs"
       end
     end
@@ -29,16 +29,16 @@ class Mcs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/mcs/releases/download/v0.7.12/mcs_Linux_x86_64.tar.gz"
-      sha256 "0d007eeee37ee6fa09898f6f16f0d462c23c1d0b7793b74ce7c4418372ed2f93"
-      def install
+      url "https://github.com/cv/mcs/releases/download/v0.8.0/mcs_Linux_x86_64.tar.gz"
+      sha256 "68202e752e4cc0c5d55b1e96d653e764c0f60f63cdea7d5d9725ae864431af77"
+      define_method(:install) do
         bin.install "mcs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/mcs/releases/download/v0.7.12/mcs_Linux_arm64.tar.gz"
-      sha256 "9954ccc852a6f7c7e2f9b1ab8b48e0fc31c04669bf3049c38078f1eca553f35d"
-      def install
+      url "https://github.com/cv/mcs/releases/download/v0.8.0/mcs_Linux_arm64.tar.gz"
+      sha256 "ea6f92e740a0f7e7d8d2a90d6169eced2f23697bca0cc7d5daa27daf9aea677a"
+      define_method(:install) do
         bin.install "mcs"
       end
     end
@@ -46,7 +46,7 @@ class Mcs < Formula
 
   def caveats
     <<~EOS
-      To enable Claude Code integration, run:
+      To install the mcs agent skill, run:
         mcs skill install
     EOS
   end
