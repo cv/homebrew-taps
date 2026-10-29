@@ -5,21 +5,21 @@
 class Mcs < Formula
   desc "CLI for controlling your connected vehicle"
   homepage "https://github.com/cv/mcs"
-  version "0.9.0"
+  version "0.9.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cv/mcs/releases/download/v0.9.0/mcs_Darwin_x86_64.tar.gz"
-      sha256 "2194b13a9037cd2cb2d35f2883f80199efe832a33d8c4f2a10dc5cbb38f56a4d"
+      url "https://github.com/cv/mcs/releases/download/v0.9.1/mcs_Darwin_x86_64.tar.gz"
+      sha256 "2700f56d0763105dbd14cb1b1fdcb3a9a7c0036e29010c906e72bb1fd7604a00"
 
       define_method(:install) do
         bin.install "mcs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cv/mcs/releases/download/v0.9.0/mcs_Darwin_arm64.tar.gz"
-      sha256 "0c54226304d768aba31e0178bce438b61f182ab1ec954f2474c1449ef1d5c075"
+      url "https://github.com/cv/mcs/releases/download/v0.9.1/mcs_Darwin_arm64.tar.gz"
+      sha256 "1ae2c747a73a156264857c4d86582dab792452f23f0a3d74a16c9c909efc81be"
 
       define_method(:install) do
         bin.install "mcs"
@@ -29,15 +29,15 @@ class Mcs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/mcs/releases/download/v0.9.0/mcs_Linux_x86_64.tar.gz"
-      sha256 "588801530672c4ff904696956f91f1485644a1c1aa24bb7e1294c2268413958f"
+      url "https://github.com/cv/mcs/releases/download/v0.9.1/mcs_Linux_x86_64.tar.gz"
+      sha256 "9b6279b65ffdfb3e2f2085984e7cdf22cc7abce34ccea98636a9f2145cb6e249"
       define_method(:install) do
         bin.install "mcs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/mcs/releases/download/v0.9.0/mcs_Linux_arm64.tar.gz"
-      sha256 "3c330a61550642c9f613d1ca51edc97532dbf209ad819e1bb3cbffede8054845"
+      url "https://github.com/cv/mcs/releases/download/v0.9.1/mcs_Linux_arm64.tar.gz"
+      sha256 "cfc0f920af63dca42077fc803ba0bc6d53964672034c2e974c07bba4744f95e7"
       define_method(:install) do
         bin.install "mcs"
       end
